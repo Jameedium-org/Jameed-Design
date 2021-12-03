@@ -13,17 +13,17 @@ const pages = [
     title: "The Logo الشعار",
     pages: [
       {
-        path: "/brandmark",
+        path: "/logo/brandmark",
         title: "Brandmark العلامة",
         content: pageLoader(() => import("./pages/logo/brandmark.md"))
       },
       {
-        path: "/typography",
-        title: "Typography الخط",
+        path: "/logo/typography",
+        title: "Logo Typography الخط",
         content: pageLoader(() => import("./pages/logo/typography.md"))
       },
       {
-        path: "/responsive-design",
+        path: "/logo/responsive-design",
         title: "Responsive design التصميم المتجاوب",
         content: pageLoader(() => import("./pages/logo/responsive.md"))
       }
@@ -33,14 +33,14 @@ const pages = [
     title: "Colors الألوان",
     pages: [
       {
-        path: "/main-colors",
+        path: "/colors/main",
         title: "Main Colors الألوان الرئيسة",
         content: pageLoader(() => import("./pages/colors/colors.md"))
       },
       {
-        path: "/color-shades",
+        path: "/colors/shades",
         title: "Color Shades درجات الألوان",
-        content: pageLoader(() => import("./pages/colors/usage.md"))
+        content: pageLoader(() => import("./pages/colors/shades.md"))
       }
     ]
   },
@@ -48,12 +48,12 @@ const pages = [
     title: "UI Components",
     pages: [
       {
-        path: "/buttons",
+        path: "/ui/buttons",
         title: "Buttons",
         content: pageLoader(() => import("./pages/ui/buttons.md"))
       },
       {
-        path: "/cards",
+        path: "/ui/cards",
         title: "Cards",
         content: pageLoader(() => import("./pages/ui/cards.md"))
       }
@@ -63,12 +63,12 @@ const pages = [
     title: "Social Media",
     pages: [
       {
-        path: "/profile",
+        path: "/socials/profile",
         title: "Profile",
         content: pageLoader(() => import("./pages/social/profile.md"))
       },
       {
-        path: "/youtube-banner",
+        path: "/youtube/banner",
         title: "Youtube Banner",
         content: pageLoader(() => import("./pages/social/yt-banner.md"))
       }
