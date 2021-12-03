@@ -1,0 +1,32 @@
+{
+  "name": "jameed-design",
+  "version": "1.0.0",
+  "main": "index.js",
+  "dependencies": {
+    "catalog": "^3.6.2",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  },
+  "scripts": {
+    "catalog-start": "catalog start",
+    "catalog-build": "catalog build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Jameedium-org/Jameed-Design.git"
+  },
+  "keywords": [
+    "Jameed",
+    "Jameedium",
+    "Design",
+    "Brand",
+    "Guidelines"
+  ],
+  "author": "Jameedium Dev. Team",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/Jameedium-org/Jameed-Design/issues"
+  },
+  "homepage": "https://github.com/Jameedium-org/Jameed-Design#readme",
+  "description": ""
+}
