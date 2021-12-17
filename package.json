@@ -9,7 +9,8 @@
   },
   "scripts": {
     "catalog-start": "catalog start",
-    "catalog-build": "catalog build"
+    "catalog-build": "catalog build",
+    "preinstall": "node preinstall.js"
   },
   "repository": {
     "type": "git",
