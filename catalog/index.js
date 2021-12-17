@@ -6,43 +6,58 @@ import "../assets/css/style.css";
 const pages = [
   {
     path: "/",
-    title: "Home الرئيسة",
+    title: "Home",
     content: pageLoader(() => import("./pages/WELCOME.md"))
   },
   {
-    title: "The Logo الشعار",
+    title: "The Logo",
     pages: [
       {
         path: "/logo/brandmark",
-        title: "Brandmark العلامة",
+        title: "Brandmark",
         content: pageLoader(() => import("./pages/logo/brandmark.md"))
       },
       {
         path: "/logo/typography",
-        title: "Logo Typography الخط",
+        title: "Logo Typography",
         content: pageLoader(() => import("./pages/logo/typography.md"))
       },
       {
         path: "/logo/responsive-design",
-        title: "Responsive design التصميم المتجاوب",
+        title: "Responsive design",
         content: pageLoader(() => import("./pages/logo/responsive.md"))
+      },
+      {
+        path: "/logo/usage",
+        title: "Logo Usage",
+        content: pageLoader(() => import("./pages/logo/usage.md"))
       }
     ]
   },
   {
-    title: "Colors الألوان",
+    title: "Colors",
     pages: [
       {
         path: "/colors/main",
-        title: "Main Colors الألوان الرئيسة",
+        title: "Main Colors",
         content: pageLoader(() => import("./pages/colors/colors.md"))
       },
       {
         path: "/colors/shades",
-        title: "Color Shades درجات الألوان",
+        title: "Color Shades",
         content: pageLoader(() => import("./pages/colors/shades.md"))
+      },
+      {
+        path: "/colors/greyscale",
+        title: "Grey Scale",
+        content: pageLoader(() => import("./pages/colors/greyscale.md"))
       }
     ]
+  },
+  {
+    title: "Fonts",
+    path: "/fonts",
+    content: pageLoader(() => import("./pages/fonts/fonts.md"))
   },
   {
     title: "UI Components",
@@ -73,39 +88,47 @@ const pages = [
         content: pageLoader(() => import("./pages/social/yt-banner.md"))
       }
     ]
+  },
+  {
+    title: "Downloads",
+    pages: [
+      {
+        path: "/downloads/logo",
+        title: "Logo Files",
+        content: pageLoader(() => import("./pages/downloads/logo.md"))
+      }
+    ]
   }
 ];
 
 const theme = {
   // Colors
-  background: "#000000",
-  textColor: "#000000",
-  codeColor: "#000000",
-  linkColor: "#000000",
+  background: "#ffffff",
+  textColor: "#131315",
+  codeColor: "#000",
+  linkColor: "#0074CC",
   // NavigationBar background color, but also sometimes used as a foreground
   // or border color.
-  lightColor: "#000000",
+  lightColor: "#d3d3d5",
   // Used in PageHeader
-  pageHeadingBackground: "#000000",
-  pageHeadingTextColor: "#fff",
-  // Used in Menu and PageHeader to make sure the top parts have
-  // the same height.
-  pageHeadingHeight: 200,
+  pageHeadingBackground: "#d3d3d5",
+  pageHeadingTextColor: "#131315",
+  pageHeadingHeight: 140,
   // Used for navigation bar
-  navBarBackground: "#F2F2F2",
-  navBarTextColor: "#003B5C",
+  navBarBackground: "#d3d3d5",
+  navBarTextColor: "#212123",
   // Used in ResponsiveTabs (tab text), Download specimen (title text).
   // Typography: headings.
-  brandColor: "#003B5C",
+  brandColor: "#0074CC",
 
-  sidebarColor: "red",
-  sidebarColorText: "#003B5C",
-  sidebarColorTextActive: "#FF5555",
-  sidebarColorLine: "#EBEBEB",
-  sidebarColorHeading: "#003B5C",
+  sidebarColor: "#212123",
+  sidebarColorText: "#ededef",
+  sidebarColorTextActive: "#33A7FF",
+  sidebarColorLine: "#ededef",
+  sidebarColorHeading: "#fff",
   // Used in the html, react, and image specimens.
-  bgLight: "#F2F2F2",
-  bgDark: "#333333",
+  bgLight: "#d3d3d5",
+  bgDark: "#131315",
   // Keys appear to be PrismJS token types.
   codeStyles: {
     tag: { color: "#FF5555" },
@@ -116,10 +139,7 @@ const theme = {
     string: { color: "#00263E" }
   },
   // Patterns
-  checkerboardPatternLight:
-    "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAAAAACoWZBhAAAAF0lEQVQI12P4BAI/QICBFCaYBPNJYQIAkUZftTbC4sIAAAAASUVORK5CYII=",
-  checkerboardPatternDark:
-    "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAAAAACoWZBhAAAAFklEQVQI12NQBQF2EGAghQkmwXxSmADZJQiZ2ZZ46gAAAABJRU5ErkJggg==",
+  
   // Fonts
   fontFamily: "'Roboto', sans-serif",
   fontHeading: "'Roboto', sans-serif",
@@ -138,7 +158,8 @@ ReactDOM.render(
                 {name: 'desktop', width: 1920, height: 1080},
             ]}
             pages={pages}
-            //theme={theme}
+            theme={theme}
+            useBrowserHistory = {true}
             />,
   document.getElementById("catalog")
 );
